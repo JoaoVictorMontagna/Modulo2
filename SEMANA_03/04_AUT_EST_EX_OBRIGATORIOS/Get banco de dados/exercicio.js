@@ -4,7 +4,7 @@ const app = express();
 const hostname = '127.0.0.1';
 const port = 3000;
 const sqlite3 = require('sqlite3').verbose();
-const DBPATH = 'tarefa.db'; //use o nome que você achar melhor para o banco de dados
+const DBPATH = 'BDprojeto.db'; //use o nome que você achar melhor para o banco de dados
 
 app.use(express.json());
 app.get('/DP', (req, res) => {
@@ -20,11 +20,11 @@ app.get('/DP', (req, res) => {
     });
     db.close(); // Fecha o banco
 });
-app.get('/Experiencia', (req, res) => {
+app.get('/Usuario', (req, res) => {
     res.statusCode = 200;
     res.setHeader('Access-Control-Allow-Origin', '*'); 
     var db = new sqlite3.Database(DBPATH); // Abre o banco
-    var sql = 'SELECT nomeDaEmpresa, anoInicio, anoFim,cargo , descreverAtividades FROM Experiencia ORDER BY AnoFim DESC';
+    var sql = 'SELECT nomeFantasia, Cnpj, email,serviços  FROM Usuario ORDER BY nomeFantasia DESC';
     db.all(sql, [],  (err, rows ) => {
         if (err) {
             throw err;
