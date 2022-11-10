@@ -20,5 +20,19 @@ h1{
 p{
   font-size: 140%;
 }
-
-
+div.esquerda{
+  float:left;
+  text-align: left;
+}
+div.direita{
+  float:right;
+  text-align: left;
+}
+@media screen and (max-width:520px) {
+ div.esquerda{
+  float:none;
+ }
+ div.direita{
+  float:none;
+ }
+}
