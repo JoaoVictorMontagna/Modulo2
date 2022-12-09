@@ -1,0 +1,19 @@
+.voltar{
+    font-style: none;
+    margin-bottom: 20%;
+    color: black;
+    background-color: brown;
+}
+.titulo{
+    color:blueviolet;
+}
+.texto{
+    font-style:none;
+    color: white;
+    background-color: rgb(77, 77, 145);
+    padding: 0.8%;
+}
+
+.menu{
+    margin:2%;
+}
